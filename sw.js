@@ -73,6 +73,6 @@ self.addEventListener('activate', (event) => {
 self.addEventListener("notificationclick", event => {
     event.notification.close();
     event.waitUntil(
-        clients.openWindow("https://VictorLz.github.io/TU_REPO/index.html")
+        clients.openWindow("https://VictorLz008.github.io/TU_REPO/index.html")
     );
 });
