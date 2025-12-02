@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación educativa de matemáticas para niños de primaria">
+    <meta name="theme-color" content="#4A90E2">
+    <title>MateMágica - Aprende Matemáticas</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="icon-192.jpg">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>🎓 MateMágica</h1>
+                <p class="subtitle">Aprende matemáticas de forma divertida</p>
+            </div>
+        </header>
+
+        <button id="btn-notify" class="btn-primary">
+            🔔 Activar Notificaciones
+        </button>
+
+
+        <main class="modules-grid">
+            <div class="module-card" data-module="plano-cartesiano">
+                <div class="module-icon">📍</div>
+                <h2>Plano Cartesiano</h2>
+                <p>Aprende sobre coordenadas y puntos en el plano</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="porcentajes">
+                <div class="module-icon">📊</div>
+                <h2>Porcentajes</h2>
+                <p>Descubre cómo calcular y usar porcentajes</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="angulos">
+                <div class="module-icon">📐</div>
+                <h2>Ángulos y Transportador</h2>
+                <p>Mide y clasifica diferentes tipos de ángulos</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="fracciones">
+                <div class="module-icon">🍕</div>
+                <h2>Fracciones Equivalentes</h2>
+                <p>Entiende las fracciones y sus equivalencias</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="ecuaciones">
+                <div class="module-icon">🔢</div>
+                <h2>Ecuaciones Simples</h2>
+                <p>Resuelve ecuaciones de primer grado</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="geometricos">
+                <div class="module-icon">🔷</div>
+                <h2>Cuerpos Geométricos</h2>
+                <p>Conoce las figuras tridimensionales</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="operaciones">
+                <div class="module-icon">➕</div>
+                <h2>Operaciones Básicas</h2>
+                <p>Practica suma, resta, multiplicación y división</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+
+            <div class="module-card" data-module="negativos">
+                <div class="module-icon">➖</div>
+                <h2>Números Negativos</h2>
+                <p>Trabaja con números menores que cero</p>
+                <button class="btn-start">Comenzar</button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2025 MateMágica - Educación Matemática</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

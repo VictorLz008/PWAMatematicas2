@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4A90E2">
+    <title>MateMágica - Módulo</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="module-header">
+            <button class="btn-back" onclick="goHome()">← Volver al menú</button>
+            <h1 id="module-title">Módulo</h1>
+        </header>
+
+        <nav class="section-nav">
+            <button class="nav-btn active" data-section="teoria">📚 Teoría</button>
+            <button class="nav-btn" data-section="practica">🎮 Práctica</button>
+            <button class="nav-btn" data-section="examen">📝 Examen</button>
+        </nav>
+
+        <main class="module-content">
+            <!-- Sección de Teoría -->
+            <section id="teoria-section" class="content-section active">
+                <div id="teoria-content"></div>
+            </section>
+
+            <!-- Sección Interactiva -->
+            <section id="practica-section" class="content-section">
+                <div id="practica-content"></div>
+            </section>
+
+            <!-- Sección de Examen -->
+            <section id="examen-section" class="content-section">
+                <div id="examen-intro" class="exam-intro">
+                    <h2>📝 Examen del Módulo</h2>
+                    <p>Responde 10 preguntas para aprobar esta lección.</p>
+                    <p><strong>Necesitas al menos 7 respuestas correctas para aprobar.</strong></p>
+                    <button class="btn-primary" onclick="startExam()">Comenzar Examen</button>
+                </div>
+
+                <div id="examen-content" style="display: none;">
+                    <div class="exam-progress">
+                        <span>Pregunta <span id="current-question">1</span> de 10</span>
+                    </div>
+                    <div id="question-container"></div>
+                    <div class="exam-navigation">
+                        <button class="btn-secondary" id="btn-prev" onclick="prevQuestion()" disabled>← Anterior</button>
+                        <button class="btn-primary" id="btn-next" onclick="nextQuestion()">Siguiente →</button>
+                        <button class="btn-success" id="btn-submit" onclick="submitExam()" style="display: none;">Enviar Examen</button>
+                    </div>
+                </div>
+
+                <div id="examen-results" style="display: none;">
+                    <div class="results-card">
+                        <h2 id="results-title">Resultados</h2>
+                        <div class="score-circle">
+                            <span id="score-display">0/10</span>
+                        </div>
+                        <p id="results-message"></p>
+                        <div class="results-actions">
+                            <button class="btn-primary" onclick="resetExam()">Volver a Intentar</button>
+                            <button class="btn-secondary" onclick="goHome()">Menú Principal</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="modules-data.js"></script>
+    <script src="module-logic.js"></script>
+</body>
+</html>
